@@ -1,8 +1,12 @@
 {
-  "name": "WebSocket-server",
+  "name": "websocket-server",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/monarchinit",
+  "repository": "https://github.com/monarchinit/simple-WebSocket-server",
   "author": "https://github.com/monarchinit",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
 }
