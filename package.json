@@ -4,9 +4,29 @@
   "main": "index.js",
   "repository": "https://github.com/monarchinit/simple-WebSocket-server",
   "author": "https://github.com/monarchinit",
+  "scripts": {
+    "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
+    "build": "rm -rf ./dist && ./node_modules/.bin/tsc",
+    "start:watch": "nodemon"
+  },
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
+    "@types/node": "^14.0.27",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "yarn start",
+    "ext": "ts"
   }
 }
